@@ -393,12 +393,13 @@ function shareResult() {
     document.getElementById("pointsStat").textContent;
 
   const category = document
-  .getElementById("quizCategory")
-  .textContent
-  .replace(/[^\x00-\x7F]/g, "")
-  .trim();
+    .getElementById("quizCategory")
+    .textContent
+    .replace(/[^\x00-\x7F]/g, "")
+    .trim();
 
-  const quizLink = window.location.href.split("#")[0];
+  const quizLink =
+    "https://brindhar-code.github.io/CodeNova-Task2-Quiz/";
 
   const message =
     "MY QUIZNOVA RESULTS!\n\n" +
@@ -408,13 +409,14 @@ function shareResult() {
     "Total Points: " + totalPoints + "\n\n" +
     "Think Smart. Play QuizNova!\n" +
     "Can you beat my score?\n\n" +
-    "Play here: " + quizLink;
+    "Play QuizNova here:\n" + quizLink;
 
   const whatsappURL =
     "https://wa.me/?text=" + encodeURIComponent(message);
 
   window.open(whatsappURL, "_blank");
 }
+
 // Set up the category cards and buttons.
 document.querySelectorAll(".category-card").forEach((card) => {
   card.addEventListener("click", () => selectCategory(card.dataset.category));
