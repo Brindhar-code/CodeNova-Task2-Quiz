@@ -1,0 +1,200 @@
+{
+  "tech": [
+    {
+      "q": "Which language is mainly used to structure web pages?",
+      "options": ["Python", "HTML", "SQL", "C"],
+      "answer": 1,
+      "hint": "It uses tags such as h1 and p.",
+      "explanation": "HTML defines the structure and content of web pages.",
+      "difficulty": "Easy"
+    },
+    {
+      "q": "Which keyword declares a block-scoped variable in JavaScript?",
+      "options": ["define", "dim", "let", "print"],
+      "answer": 2,
+      "hint": "It has three letters and starts with l.",
+      "explanation": "The let keyword declares a block-scoped variable.",
+      "difficulty": "Easy"
+    },
+    {
+      "q": "Which data structure follows FIFO?",
+      "options": ["Stack", "Queue", "Tree", "Graph"],
+      "answer": 1,
+      "hint": "The first item added leaves first.",
+      "explanation": "A queue follows First In, First Out.",
+      "difficulty": "Easy"
+    },
+    {
+      "q": "What is the average lookup time in a well-distributed hash table?",
+      "options": ["O(n)", "O(log n)", "O(1)", "O(n²)"],
+      "answer": 2,
+      "hint": "It is constant time on average.",
+      "explanation": "Hash tables provide average-case O(1) lookup.",
+      "difficulty": "Medium"
+    },
+    {
+      "q": "Which protocol helps encrypt web traffic?",
+      "options": ["HTTP", "FTP", "HTTPS", "SMTP"],
+      "answer": 2,
+      "hint": "It is the secure version of HTTP.",
+      "explanation": "HTTPS uses TLS to protect data in transit.",
+      "difficulty": "Easy"
+    }
+  ],
+  "gk": [
+    {
+      "q": "What is the capital of Japan?",
+      "options": ["Seoul", "Tokyo", "Beijing", "Bangkok"],
+      "answer": 1,
+      "hint": "It hosted the 2020 Summer Olympics.",
+      "explanation": "Tokyo is the capital of Japan.",
+      "difficulty": "Easy"
+    },
+    {
+      "q": "Which is the largest ocean on Earth?",
+      "options": ["Atlantic", "Indian", "Pacific", "Arctic"],
+      "answer": 2,
+      "hint": "It lies between Asia and the Americas.",
+      "explanation": "The Pacific Ocean is the largest ocean.",
+      "difficulty": "Easy"
+    },
+    {
+      "q": "How many days are there in a leap year?",
+      "options": ["364", "365", "366", "367"],
+      "answer": 2,
+      "hint": "February has one extra day.",
+      "explanation": "A leap year has 366 days.",
+      "difficulty": "Easy"
+    },
+    {
+      "q": "Which Indian city is known as the Pink City?",
+      "options": ["Mumbai", "Jaipur", "Chennai", "Kochi"],
+      "answer": 1,
+      "hint": "It is the capital of Rajasthan.",
+      "explanation": "Jaipur is popularly known as the Pink City.",
+      "difficulty": "Easy"
+    },
+    {
+      "q": "Who wrote the Indian national anthem?",
+      "options": [
+        "Subramania Bharati",
+        "Rabindranath Tagore",
+        "Sarojini Naidu",
+        "Bankim Chandra Chatterjee"
+      ],
+      "answer": 1,
+      "hint": "He was a Nobel Prize-winning poet.",
+      "explanation": "Rabindranath Tagore wrote Jana Gana Mana.",
+      "difficulty": "Medium"
+    }
+  ],
+  "science": [
+    {
+      "q": "Which planet is known as the Red Planet?",
+      "options": ["Venus", "Mars", "Mercury", "Jupiter"],
+      "answer": 1,
+      "hint": "Its surface contains iron-rich dust.",
+      "explanation": "Iron oxides give Mars its reddish appearance.",
+      "difficulty": "Easy"
+    },
+    {
+      "q": "What is the chemical formula for water?",
+      "options": ["CO2", "O2", "H2O", "NaCl"],
+      "answer": 2,
+      "hint": "It contains hydrogen and oxygen.",
+      "explanation": "A water molecule has two hydrogen atoms and one oxygen atom.",
+      "difficulty": "Easy"
+    },
+    {
+      "q": "What force pulls objects toward Earth?",
+      "options": ["Friction", "Gravity", "Magnetism", "Tension"],
+      "answer": 1,
+      "hint": "It keeps us on the ground.",
+      "explanation": "Gravity attracts objects with mass toward one another.",
+      "difficulty": "Easy"
+    },
+    {
+      "q": "Which organ pumps blood through the human body?",
+      "options": ["Lungs", "Brain", "Heart", "Kidneys"],
+      "answer": 2,
+      "hint": "It beats continuously.",
+      "explanation": "The heart pumps blood through the circulatory system.",
+      "difficulty": "Easy"
+    },
+    {
+      "q": "What is the SI unit of electric current?",
+      "options": ["Volt", "Watt", "Ohm", "Ampere"],
+      "answer": 3,
+      "hint": "It is named after André-Marie Ampère.",
+      "explanation": "The ampere is the SI unit of electric current.",
+      "difficulty": "Medium"
+    }
+  ],
+  "cyber": [
+    {
+      "q": "What is phishing?",
+      "options": [
+        "A programming language",
+        "A trick to steal sensitive information",
+        "A type of monitor",
+        "A backup method"
+      ],
+      "answer": 1,
+      "hint": "It often arrives as a fake email or message.",
+      "explanation": "Phishing uses deceptive messages or websites to steal information.",
+      "difficulty": "Easy"
+    },
+    {
+      "q": "Which password practice is generally the strongest?",
+      "options": [
+        "Using 12345678",
+        "Using the word password",
+        "Reusing one password everywhere",
+        "Using a long, unique passphrase"
+      ],
+      "answer": 3,
+      "hint": "Length and uniqueness are important.",
+      "explanation": "A long, unique password or passphrase is harder to guess.",
+      "difficulty": "Easy"
+    },
+    {
+      "q": "What does MFA stand for?",
+      "options": [
+        "Multi-Factor Authentication",
+        "Main File Access",
+        "Multiple Firewall Application",
+        "Managed File Algorithm"
+      ],
+      "answer": 0,
+      "hint": "It adds another verification step to login.",
+      "explanation": "MFA uses two or more different types of verification.",
+      "difficulty": "Easy"
+    },
+    {
+      "q": "What is the main purpose of a firewall?",
+      "options": [
+        "Increase screen brightness",
+        "Filter network traffic",
+        "Edit images",
+        "Write code"
+      ],
+      "answer": 1,
+      "hint": "It controls incoming and outgoing network connections.",
+      "explanation": "A firewall filters network traffic according to security rules.",
+      "difficulty": "Easy"
+    },
+    {
+      "q": "What is ransomware?",
+      "options": [
+        "A spreadsheet",
+        "Malware that demands payment",
+        "A network cable",
+        "A programming framework"
+      ],
+      "answer": 1,
+      "hint": "It may lock or encrypt files.",
+      "explanation": "Ransomware typically blocks access to data and demands a ransom.",
+      "difficulty": "Medium"
+    }
+  ]
+}

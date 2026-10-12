@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Challenge yourself with QuizNova, an interactive quiz covering coding, general knowledge, science, and cybersecurity.">
+  <title>QuizNova | Challenge Your Brain</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <div class="logo">
+        <span class="logo-icon">🧠</span>
+        <span>Quiz<span>Nova</span></span>
+      </div>
+      <span class="nav-badge">✨ Learn · Play · Grow</span>
+    </nav>
+
+    <main>
+      <!-- HOME SCREEN -->
+      <section id="homeScreen">
+        <header class="hero">
+  <span class="eyebrow">🌊 YOUR NEXT CHALLENGE</span>
+
+  <h1>
+    Think Smart.<br />
+    <span class="gradient-text">Play QuizNova.</span>
+  </h1>
+
+  <p>
+    Challenge your knowledge, explore new topics,
+    and discover how much you know. Your next
+    big brain moment starts here!
+  </p>
+
+  <a href="#categories" class="primary-btn">
+    Explore Quizzes →
+  </a>
+</header>
+
+        <h2 class="section-heading" id="categories">Choose your adventure</h2>
+        <p class="section-subtitle">Select a category to begin your challenge.</p>
+
+        <div class="category-grid">
+          <button class="category-card tech selected" data-category="tech" aria-pressed="true" type="button">
+            <span class="checkmark">✓</span>
+            <div class="category-icon">💻</div>
+            <h3>Tech & Coding</h3>
+            <p>Programming, web development and computer science.</p>
+          </button>
+
+          <button class="category-card gk" data-category="gk" aria-pressed="false" type="button">
+            <span class="checkmark">✓</span>
+            <div class="category-icon">🌍</div>
+            <h3>General Knowledge</h3>
+            <p>Discover facts about the world around you.</p>
+          </button>
+
+          <button class="category-card science" data-category="science" aria-pressed="false" type="button">
+            <span class="checkmark">✓</span>
+            <div class="category-icon">🔬</div>
+            <h3>Science</h3>
+            <p>Explore space, nature, physics and biology.</p>
+          </button>
+
+          <button class="category-card cyber" data-category="cyber" aria-pressed="false" type="button">
+            <span class="checkmark">✓</span>
+            <div class="category-icon">🛡️</div>
+            <h3>Cybersecurity</h3>
+            <p>Learn about online safety and digital security.</p>
+          </button>
+        </div>
+
+        <section class="setup-panel">
+          <h2 class="section-heading" style="margin-top:0">Customize your challenge ⚙️</h2>
+
+          <div class="settings-grid">
+            <div class="field">
+              <label for="difficulty">Difficulty</label>
+              <select id="difficulty">
+                <option value="All">All levels</option>
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="questionCount">Number of questions</label>
+              <select id="questionCount">
+                <option value="5">5 questions</option>
+                <option value="10">10 questions</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="timeLimit">Time per question</label>
+              <select id="timeLimit">
+                <option value="15">15 seconds</option>
+                <option value="20" selected>20 seconds</option>
+                <option value="30">30 seconds</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="start-row">
+            <p class="start-note">🏆 Best score in this category: <strong id="bestScore">0%</strong></p>
+            <button id="startBtn" class="primary-btn" type="button">Start quiz <span>→</span></button>
+          </div>
+        </section>
+      </section>
+
+      <!-- QUIZ SCREEN -->
+      <section id="quizScreen" class="quiz-panel hidden" aria-live="polite">
+        <div class="quiz-top">
+          <span id="quizCategory" class="quiz-tag">💻 Tech & Coding</span>
+          <span id="timer" class="timer">⏱️ 20s</span>
+        </div>
+
+        <div class="progress-info">
+          <span id="questionNumber">Question 1 of 5</span>
+          <span>Points: <strong id="quizScore">0</strong></span>
+        </div>
+
+        <div class="progress-track">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+
+        <div class="quiz-top" style="margin-top:22px">
+          <span id="difficultyBadge" class="quiz-tag">Easy</span>
+        </div>
+
+        <h2 id="questionText" class="question">Your question will appear here.</h2>
+
+        <div id="options" class="options-grid"></div>
+
+        <p id="hintText" class="hint-text"></p>
+        <div id="feedback" class="feedback" role="status" aria-live="polite"></div>
+
+        <div class="quiz-bottom">
+          <button id="hintBtn" class="secondary-btn" type="button">💡 Get a hint</button>
+          <div class="quiz-actions">
+            <button id="soundBtn" class="secondary-btn" type="button">🔊 Sound on</button>
+            <button id="nextBtn" class="primary-btn" type="button" disabled>Next question →</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESULTS SCREEN -->
+      <section id="resultScreen" class="result-panel hidden" aria-live="polite">
+        <div id="resultIcon" class="result-icon">🏆</div>
+        <h2 id="resultTitle">Quiz completed!</h2>
+        <p id="resultMessage" class="result-message">Here are your results.</p>
+
+        <div class="score-ring">
+          <div>
+            <strong id="finalPercentage">0%</strong>
+            <span style="display:block">Accuracy</span>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <strong id="correctStat">0/5</strong>
+            <span>Correct answers</span>
+          </div>
+          <div class="stat-card">
+            <strong id="pointsStat">0</strong>
+            <span>Total points</span>
+          </div>
+          <div class="stat-card">
+            <strong id="hintsStat">0</strong>
+            <span>Hints used</span>
+          </div>
+        </div>
+
+        <p class="start-note">🏆 Best accuracy: <strong id="resultBest">0%</strong></p>
+
+        <h3 class="section-heading" style="text-align:left">📖 Answer review</h3>
+        <div id="reviewList" class="options-grid" style="text-align:left"></div>
+
+        <div class="result-actions">
+          <button id="playAgainBtn" class="primary-btn" type="button">🔄 Play again</button>
+          <button id="shareBtn" class="secondary-btn" type="button">📤 Share result</button>
+          <button id="homeBtn" class="secondary-btn" type="button">🏠 Home</button>
+          <button id="restartBtn" class="secondary-btn hidden" type="button">Restart</button>
+          <button id="changeCategoryBtn" class="secondary-btn hidden" type="button">Change category</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Made with 💜 for curious minds.</p>
+      <p>QuizNova · CodeNova Frontend Development Internship · Task 2</p>
+    </footer>
+  </div>
+</body>
+</html>
